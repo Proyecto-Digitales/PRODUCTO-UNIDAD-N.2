@@ -1,4 +1,4 @@
-                                                 SUMADOR - RESTADOR DE DOS NÚMEROS DE 8 BITS
+                                               SUMADOR - RESTADOR DE DOS NÚMEROS DE 8 BITS
 
 
 1.PLANTEAMIENTO DEL PROBLEMA
@@ -10,7 +10,7 @@ Un sumador es un circuito digital que realiza la adición de números, este tipo
 
 Objetivo general
 
-- Implementar un circuito sumador – restador, para dos números de 8 bits, mostrando el resultado en displays de 7 segmentos..
+- Implementar un circuito sumador – restador, para dos números de 8 bits, mostrando el resultado en displays de 7 segmentos.
 
 Objetivo específicos
 
@@ -18,7 +18,7 @@ Objetivo específicos
 
 - Multiplexar las salidas para poder escoger que resultado se desea ver, ya sea suma o resta en los displays de 7 segmentos.
 
-- Comprobar el funcionamiento del diseño del contador mediante la simulación en proteus e implementada en Tinkercad (laboratorio virtual).
+- Comprobar el funcionamiento del diseño del contador mediante la simulación en proteus e implementada en constructor virtual (laboratorio virtual).
 
 
 3.ESTADO DEL ARTE
@@ -238,7 +238,7 @@ Siliceo, R. (2018). Algoritmo de las operaciones aritmeticas aplicadas a los cod
 
 Para poder usar el circuito sumador - restador es necesario que el usuario este familizarizado con el código binario natural, a continuación dejamos una imagen en la que se puede observar una parte del cógido con sus equivalentes en decimal, ademas de el link para que el usuario pueda ver una la tabla completa del codigo binario natural.
 
-![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/manual%201.PNG
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/manual%201.PNG)
 
 
 En esta tabla se encuentran los números del 1 al 10, esto es necesario ya que para usar el circuito debera ingresar los números en código binario.
@@ -257,7 +257,7 @@ Observamos la ubicación con su etiqueta donde el usuario debe ingresar los núm
 
 Observamos la ubicación donde el usuario debe ingresar los números en el constructor virtual, en este caso el conjunto de switchs de la derecha corresponden al prmer número y el conjunto de la izquierda de la pantalla corresponden al segundo número.
 
-Nota: Se debe tomar en cuenta que el switch más ubicado a la derecha corresponde al bit más significativo, y el switch más ubicado a la izquierda corresponde al bit menos significativo de los números a ingresar.
+Nota: Se debe tomar en cuenta que el switch final ubicado a la derecha corresponde al bit más significativo, y el switch final ubicado a la izquierda corresponde al bit menos significativo de los números a ingresar.
 
 Para que el usuario puede observar el resultado ya sea de la suma o resta se debe escoger en un switch el cual controla la operación como vemos a continucación:
 
@@ -271,7 +271,7 @@ Para el caso de proteus.
 
 Para el caso del constructor virtual. En este caso solo se encuentra habilitado el switch de la derecha, para el uso del control de operación.
 
-Nota: El switch de control en estadp abierto significa que el circuito mostrara la operación resta, si se encuentra en estado cerrado, el circuito mostrará la operación suma.
+Nota: El switch de control en estado abierto significa que el circuito mostrara la operación resta, si se encuentra en estado cerrado, el circuito mostrará la operación suma.
 
 
 En el simulador proteus el usuario puede observar el resultado en displays de 7 segmentos como mostramos continuación:
@@ -288,22 +288,26 @@ En el caso del constuctor virtual se observará en leds que corresponden al resu
 
 15.2 HOJAS TÉCNICAS
 
-Datasheet 74HC293
+Datasheet 74HC4511
 
-https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Hojas%20tecnicas/Datasheet74283.pdf
+https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Hojas%20tecnicas/Datasheetcd4511b.pdf
 
-Datasheet 74HC32
+Datasheet 7404
 
-https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Hojas%20tecnicas/Datasheet7432.pdf
+https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Hojas%20tecnicas/datasheet7404.pdf
 
-Datasheet 74HC74
+Datasheet 7408
 
-https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Hojas%20tecnicas/Datasheet7474.pdf
+https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Hojas%20tecnicas/datasheet7408.pdf
 
-Datasheet 74HC08
+Datasheet 74157
 
-https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Hojas%20tecnicas/datasheet7408.pdf
+https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Hojas%20tecnicas/datasheet74157.pdf
 
-Datasheet 4511
+Datasheet 74283
 
-https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Hojas%20tecnicas/Datasheetcd4511b.pdf
+https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Hojas%20tecnicas/datasheet74283.pdf
+
+Datasheet 7485
+
+https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Hojas%20tecnicas/datasheet7485.pdf
