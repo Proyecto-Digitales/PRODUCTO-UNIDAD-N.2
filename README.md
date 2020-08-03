@@ -71,13 +71,7 @@ REYES ERAZO, CRISTHIAN EDUARDO de la FACULTAD DE EDUCACIÓN TÉCNICA PARA EL DES
 
 •Diagramas eléctricos.
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/diagrama3.jpg)
-
-
-
-
-
-
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/Diagrama%20electrico.png)
 
 
 
@@ -99,112 +93,105 @@ REYES ERAZO, CRISTHIAN EDUARDO de la FACULTAD DE EDUCACIÓN TÉCNICA PARA EL DES
 
 7.MAPA DE VARIABLES
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/mapa%20variables.jpg)
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/mapa_Variables_2.PNG)
 
 
 8.EXPLICACIÓN DEL DISEÑO
 
-Contador en código binario.
+Diagrama de bloques del circuito a diseñar:
 
-En esta etapa es necesario indicar que se utilizará un generador de señal de reloj (CLK) para los FLIP FLOP (FF), de igual forma usaremos una frecuencia aproximada de 1 Hz dados los valores de las resistencias R1 y R2 (330 Ohmios ).
-Tomaremos en cuenta que:
-- Un contador asíncrono tiene como principal característica que cada flip flop que lo compone tiene diferente señal de reloj (clk).
-- El temporizador está configurado a una frecuencia de 1 Hz, es decir que el contador aumentará de valor cada segundo.
-- Los integrados usados para los contadores con flip flops D serán el CD4013 y el 74hHC74. En nuestro caso usaremos el integrado 74HC74.
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/Diagrama%20electrico.png)
 
-Para empezar nuestro análisis tendremos que plantear los estados, en este caso de 4 bits será de 0000 a 1111 es decir un conteo de de 0 a 15.
+Entradas
 
-En esta parte vemos como se pasa de un estado al otro nuestra cuenta, lo que nos indica que las salidas de nuestros fip flops tendran una salida de 0 o 1. 
+Variables de entrada:
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/Tablas%20de%20transicion.PNG)
+Números A y B cada uno de 8 bits donde A0 y B0 son los menos significativos respectivamente:
 
-                     Tabla de verdad de cambio de estados 
+A7,A6,A5,A4,A3, A2, A1, A0  ;  B7,B6,B5,B4,B3, B2, B1,B0
 
-Tabla de excitación del flip flop D
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/dise%C3%B1o%201.png)
 
-Ya que estamos usando un flip flop tipo D, tenemos la siguiente tabla, la cual nos muestra la respuesta a los cambios de estado que sufre el flip flop.
+Las operaciones están codificadas con un bit de manera que tengamos las dos operaciones: 
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/Tabla%20de%20exitacion.PNG)
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/dise%C3%B1o%202.PNG)
 
-          Tabla de exitacion de un flip flop tipo D
- 
- Analizando el cambio de estado de cada columna tenemos el siguiente diagrama:
- 
- ![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/Cambio%20de%20estados.png)
- 
-Una vez analisado los cambios de estado procedemos a implementar el circuito en el simulador proteus, para implementar nuestro circuito debemos tomar en cuenta lo siguiente:
+Variables de salida:
+Signo, E8,E7,E6,E5,E4,E3,E2,E1,E0
 
--Necesitaremos 4 flip flops, uno por cada bit requerido en este caso seran 4 flip flops, seguido conectaremos la señal de reloj a nuestro primer flip flop, la salida de este significa el bit menos significativo de nuestro conteo.
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/dise%C3%B1o%203.png)
 
--Cada entrada de reset y clear deberá estar conectada a Vcc, ya que se activan en bajo y nos las utilizaremos.
+Operación Suma
+Para realizar la operación de suma de dos números de 8 bits utilizamos 2 sumadores conectados el primer acarreo de salida al acarreo de entrada del siguiente sumador para obtener un sumador de 8 bits 
 
--Conectamos cada terminal D a Q’ y también a los clock’s. Con esto haremos que la salida anterior se duplique hacia la entrada del siguiente flip flop.
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/dise%C3%B1o%204.png)
 
-Implementación en proteus:
+Operación resta
+Para realizar la operación resta primero usamos dos comparadores de 4 bits conectados de forma que nos de uno de 8 bits que utilizaremos en la siguiente etapa
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/dise%C3%B1o%201.PNG)
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/dise%C3%B1o%205.png)
 
-                            Simulación en proteus
-                  
-Ahora veremos la implementación en tinkercad                 
-                  
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/dise%C3%B1o%202.png)
+A continuación, se utiliza 8 multiplexores 2 a 1 para la primera comparación A<B donde entra al selector del multiplexor presentado en el lado izquierdo y así obtener el número mayor cuando sea el caso
+Y lo mismo con la segunda comparación A>B para obtener el número menor
 
-                                                                  Simulación en Tinkercad
-                
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/dise%C3%B1o%206.png)
+
+Una vez ordenado el número mayor procedemos a utilizar dos sumadores de 4 bits conectados de forma que obtengamos uno de 8 bits donde las entradas será el número mayor sumado al complemento del número menor con un acarreo inicial de 1 para así obtener la resta
+
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/dise%C3%B1o%207.png)
+
+Signo
+Para el signo utilizamos una compuerta And donde vemos que si el número A es menor a B y en la operación Op está en resta entonces este se activara indicándonos el signo
+
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/dise%C3%B1o%208.png)
+
+Salidas con multiplexores
+Para presentar las salidas utilizamos 10 multiplexores 2 a 1 conectados de la siguiente manera donde S son los bits del resultado de la suma y R son los bits del resultado de la resta controlados por OP que es la operación seleccionada y así indicándonos la respuesta de la operación que deseamos
+
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/dise%C3%B1o%2010.png)
+
+
                  
 9.- DESCRIPCIÓN DE PRERREQUISITOS Y CONFIGURACIÓN
 
-EL diseño de nuestro contador asincróno de 4 bits se lo realizó mediante el uso de flip flops tipo D. Es por ello que se tomó en cuenta la revisión de nuestro circuito integrado, en este caso es el modelo 74HC74, el cual presentamos un fragmento a continuación:
+EL diseño de nuestro circuito sumador restador de 8 bits se lo implemento tanto en el simulador proteus como en el laboratorio virtual llamado constructor digital. Es por ello que el ususario que requiera revisar el funcionamiento debe tener instalado los dos simuladores, en la carpeta llamada simuladores se encuentra el archivo que se podrá descargar para poder visualizar el circuito implementado:
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/Data1.PNG)
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/Conf%201.PNG)
 
+Como se observa ya solo es necesario iniciar la aplicación del constructor virtual no necesita instalación, para abrir el archivo del diseño, tambien se encuentra en la carpeta instaladores, donde solo es un bloc de notas el cual contiene el codigo del circuito implementado, ese es el archivo que se debe abrir.
 
-Es necesario que el usuario revise el datasheet de todos los circuitos integrados utilizados para que tenga una idea de que voltajes o corrientes soportan cada integrado, ademas de poder reconocer cada pin y cual es su función.
-En el datasheet podemos obervar todas las especificaciones que se tomó en cuenta en el diseño, todo esto con el objetivo de no mostrar errores en la simulación del circuito, y tomando en cuenta a una posible implementación con integrados reales en un futuro,
+Aqui observamos la imagen del circuito en el laboratorio virtual:
 
-Si el ususario desea comprobar el diseño del circuito lo puede hacer abriendo el archivo de la simulación en proteus o entrando a la plataforma Tinkercad en la cual se encuentra guardado el diseño implementado, tomando en cuenta que no prodrá modificar ninguna parte del circuito ya que ello conllevaria a fallas del circuito.
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/Conf%203.PNG)
 
 Nota: Es necesario tener instalado la versión 8.9 de proteus ya que si se desea abrir la simulación en versiones antiguas puede ocurrir errores o no abrir el archivo.
 
+Aqui observamos la imagen del circuito en el simulador proteus:
+
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/Conf%202.PNG)
+
+
+Es necesario que el usuario revise el datasheet de todos los circuitos integrados utilizados para que tenga una idea de que voltajes o corrientes soportan cada integrado, ademas de poder reconocer cada pin y cual es su función.
+En el datasheet podemos obervar todas las especificaciones que se tomó en cuenta en el diseño, todo esto con el objetivo de no mostrar errores en la simulación del circuito, y tomando en cuenta a una posible implementación con integrados reales en un futuro. Estos documentos los puede encontrar en la carpeta llamada fichas tecnias, del repositorio.
+
+
 10.APORTACIONES
 
-Conversión de código binario de cuatro (4) bits a BCD.
-Al tener cuatro bits es posible manejar quince (15) combinaciones de entrada e igual número de combinaciones de salida. La tabla de valores para las posibles combinaciones es la siguiente:
+Ademas de la implementación en el laboratorio virtual se realizó una simulación en el programa proteus, para comprobar el funcionamiento del circuito.
 
+En la carpeta instaladores se encuentra el archivo que contiene la simulación en proteus.
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/Binario%20a%20BCD.PNG)
+Aqui observamos el circuito terminado en el simulador:
 
-Mediante estas tablas es posible observar que los valores de las salidas son iguales hasta el número nueve (9) decimal y de ahí en adelante el código de salida aparece incrementado en seis (6) decimal respecto al código de entrada. Dado lo anterior es posible concebir un sumador que reciba como entradas A los valores del código binario y como entradas B el número seis (6) en binario (0 1 1 0) pero solo cuando la salida B4 tenga un valor de uno (1). Para obtener la expresión que brinde esta posibilidad se realizó el mapa de Karnaught para la salida B4, con el siguiente resultado:
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/Conf%202.PNG)
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/Karnauth.PNG)
+En esta simulación podemos observar cada bloque del sumador restador.
 
-Por lo tanto, se obtiene para B4 la siguiente expresión:
+Ejemplo de simulación:
 
-B4 = A3A2 + A3A1 = A3(A2 + A1)
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/aporte.PNG)
 
-El resultado de esta implementación se llevará a las entradas B3 y B2 del sumador con el fin de obtener el resultado deseado.
-
-Nota: Es necesario recordar que en la anterior descripción no tiene significado el hecho de no tener una secuencia consecutiva de valores. Así mismo en los valores de las entradas A serán ubicados los valores de salida de cada FF.
-
-“Decodificación” y presentación del resultado.
-Cada una de las salidas del sumador deben ser las entradas del decodificador/manejador que en este caso es el circuito 4511. A su vez este circuito arroja las salidas a, b, c, d, e, f  y g  a nivel alto que representan los siete (7) segmentos de un Display y específicamente uno de cátodo común. El Display utilizado es de la serie 5161 que tiene la siguiente distribución:
-
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/display.PNG)
-
-Simulación.
-Para llevar a cabo la simulación de la implementación del circuito se utilizó la herramienta proteus. Como se muestra a continuación:
-
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/Aporte1.png)
-
-
-Para la demostración también se implemento en la plataforma Tinkercad como se muestra a continuación:
-
-
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/aporte2.png)
-
-
-
+Suma de 11111111 + 11111111 (255 + 255).
 
 
 11.CONCLUSIONES
@@ -249,36 +236,54 @@ Siliceo, R. (2018). Algoritmo de las operaciones aritmeticas aplicadas a los cod
 
 15.1 MANUAL DE USUARIO
 
-Para poder usar el contador sincrónico se debe tener instalado si es posible la versión más actual de proteus.
-Abriremos el archivo de la simulación
+Para poder usar el circuito sumador - restador es necesario que el usuario este familizarizado con el código binario natural, a continuación dejamos una imagen en la que se puede observar una parte del cógido con sus equivalentes en decimal, ademas de el link para que el usuario pueda ver una la tabla completa del codigo binario natural.
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/manual1.png)
-
-Nos presenta la interfaz de usuario del simulador:
-
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/manual2.png)
-
-Procedemo a realizar la simulación hacuendo click en el botón de la parte inferior izquierda.
-
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/manual3.png)
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/manual%201.PNG
 
 
-Nota: tomar en cuenta que no se debe cambiar la frecuencia de la entrada de reloj. Ni cambiar el voltaje de entrada Vcc ya que podemos quemar los integrados.
+En esta tabla se encuentran los números del 1 al 10, esto es necesario ya que para usar el circuito debera ingresar los números en código binario.
 
-Si queremos usar la implementación en tinkercad procederemos a entrar al siguiente link:
+Aquie dejamos el link donde se encuentra una tabla más completa:
 
-https://www.tinkercad.com/things/jxkNseHqJ4V-contador-asincronico/editel?sharecode=qnTRplA-JvCfeY6Auv5toNln4Gi4wd6hVyGVvV7Ki40
+https://es.convertbinary.com/numeros/
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/manual4.png)
+Ahora para poder ingresar los números en código binario se lo hará mediante 8 switch, que corresponden a los 8 bits de que el usuario tiene permitido usar, es decir solo se puede sumar o restar números que no sobrepasen el valor de 255 (1111 1111), esto aplica tanto para la simulación en proteus y en el lab virtual.
+
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/manual%202.PNG)
+
+Observamos la ubicación con su etiqueta donde el usuario debe ingresar los números en proteus.
+
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/manual%203.PNG)
+
+Observamos la ubicación donde el usuario debe ingresar los números en el constructor virtual, en este caso el conjunto de switchs de la derecha corresponden al prmer número y el conjunto de la izquierda de la pantalla corresponden al segundo número.
+
+Nota: Se debe tomar en cuenta que el switch más ubicado a la derecha corresponde al bit más significativo, y el switch más ubicado a la izquierda corresponde al bit menos significativo de los números a ingresar.
+
+Para que el usuario puede observar el resultado ya sea de la suma o resta se debe escoger en un switch el cual controla la operación como vemos a continucación:
+
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/manual%204.PNG)
 
 
-Nos presenta la interfaz de usuario
+Para el caso de proteus.
 
-Ahora procedemos a simular para observar nuestro circuito:
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/manual%205.PNG)
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/manual5.PNG)
 
-Nota: tomar en cuenta que es debido registrarse antes en la plataforma Tinkercad para poder tener acceso, no se debe cambiar la frecuencia de la entrada de reloj. Ni cambiar el voltaje de entrada Vcc ya que podemos quemar los integrados. Evitar mover las conexiones ya que dañaría el diseño.
+Para el caso del constructor virtual. En este caso solo se encuentra habilitado el switch de la derecha, para el uso del control de operación.
+
+Nota: El switch de control en estadp abierto significa que el circuito mostrara la operación resta, si se encuentra en estado cerrado, el circuito mostrará la operación suma.
+
+
+En el simulador proteus el usuario puede observar el resultado en displays de 7 segmentos como mostramos continuación:
+
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/manual%206.PNG)
+
+
+En el caso del constuctor virtual se observará en leds que corresponden al resultado en binario natural.
+
+
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/manual%207.PNG)
+
 
 
 15.2 HOJAS TÉCNICAS
