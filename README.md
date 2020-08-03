@@ -1,9 +1,9 @@
-                                               SUMADOR - RESTADOR DE DOS NÚMEROS DE 8 BITS
+                                             SUMADOR - RESTADOR DE DOS NÚMEROS DE 8 BITS
 
 
 1.PLANTEAMIENTO DEL PROBLEMA
 
-Un sumador es un circuito digital que realiza la adición de números, este tipo de circuito también nos puede ayudar a la resta de dos números. Es por ello que se desea implementar los ya mencionados circuitos sumadores en el diseño de un circuito capaz de realizar estas dos operaciones (suma - resta), para dos números de 8 bits cada uno. Este diseño conlleva el reto de poder visualizar hasta los 9 bits de salida en 3 displays de 7 segmentos, que se podrá tener en nuestro circuito sumador- restador, además de mostrar el signo en el caso que el resultado sea negativo.  
+Un sumador es un circuito digital que realiza la adición de números, este tipo de circuito mediante el método de complemento A1, también nos puede ayudar a la resta de dos números. Es por ello que se desea implementar los ya mencionados circuitos sumadores en el diseño de un circuito capaz de realizar estas dos operaciones (suma - resta), para dos números de 8 bits cada uno. Este diseño conlleva el reto de poder visualizar hasta los 9 bits de salida en 3 displays de 7 segmentos, estos 9 bits es lo máximo que podrá tener nuestro circuito sumador- restador en la salida, además de mostrar el signo en el caso que se realice una resta y el resultado sea negativo.  
 
 
 2.OBJETIVOS
@@ -169,7 +169,7 @@ Para esto se utiliza 4 displays y 3 decodificadores de BCD a 7 segmentos el prim
                  
 9.- DESCRIPCIÓN DE PRERREQUISITOS Y CONFIGURACIÓN
 
-EL diseño de nuestro circuito sumador restador de 8 bits se lo implemento tanto en el simulador proteus como en el laboratorio virtual llamado constructor digital. Es por ello que el ususario que requiera revisar el funcionamiento debe tener instalado los dos simuladores, en la carpeta llamada simuladores se encuentra el archivo que se podrá descargar para poder visualizar el circuito implementado:
+EL diseño de nuestro circuito sumador restador de 8 bits se lo implemento tanto en el simulador proteus como en el laboratorio virtual llamado constructor digital. Es por ello que el ususario que requiera revisar el funcionamiento debe tener instalado los dos simuladores, en la carpeta llamada instaladores se encuentra el archivo que se podrá descargar para poder visualizar el circuito implementado:
 
 ![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/Conf%201.PNG)
 
@@ -192,11 +192,11 @@ En el datasheet podemos obervar todas las especificaciones que se tomó en cuent
 
 10.APORTACIONES
 
-Ademas de la implementación en el laboratorio virtual se realizó una simulación en el programa proteus, para comprobar el funcionamiento del circuito.
+Además de la implementación en el laboratorio virtual se realizó una simulación en el programa proteus, para comprobar el funcionamiento del circuito.
 
 En la carpeta instaladores se encuentra el archivo que contiene la simulación en proteus.
 
-Aqui observamos el circuito terminado en el simulador:
+Aquí observamos el circuito terminado en el simulador:
 
 ![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/Conf%202.PNG)
 
@@ -249,7 +249,7 @@ Siliceo, R. (2018). Algoritmo de las operaciones aritmeticas aplicadas a los cod
 
 15.1 MANUAL DE USUARIO
 
-Para poder usar el circuito sumador - restador es necesario que el usuario este familizarizado con el código binario natural, a continuación dejamos una imagen en la que se puede observar una parte del cógido con sus equivalentes en decimal, ademas de el link para que el usuario pueda ver una la tabla completa del codigo binario natural.
+Para poder usar el circuito sumador - restador es necesario que el usuario este familiarizado con el código binario natural, a continuación dejamos una imagen en la que se puede observar una parte del cógido con sus equivalentes en decimal, ademas de el link para que el usuario pueda ver una la tabla completa del codigo binario natural.
 
 ![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/manual%201.PNG)
 
@@ -284,7 +284,7 @@ Para el caso de proteus.
 
 Para el caso del constructor virtual. En este caso solo se encuentra habilitado el switch de la derecha, para el uso del control de operación.
 
-Nota: El switch de control en estado abierto significa que el circuito mostrara la operación resta, si se encuentra en estado cerrado, el circuito mostrará la operación suma.
+Nota: El switch de control en estado abierto significa que el circuito mostrará la operación resta, si el switch se encuentra cerrado, el circuito mostrará la operación suma.
 
 
 En el simulador proteus el usuario puede observar el resultado en displays de 7 segmentos como mostramos continuación:
