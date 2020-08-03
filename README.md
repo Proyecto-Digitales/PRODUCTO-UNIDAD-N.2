@@ -150,7 +150,16 @@ Para presentar las salidas utilizamos 10 multiplexores 2 a 1 conectados de la si
 
 ![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/dise%C3%B1o%2010.png)
 
+Transformación de binario a BCD 
+Para esta última etapa el resultado obtenido máximo será de 9 bits más el signo para presentar este número en displays es necesario transformar el binario a BCD para esto usamos el método de transformación por desplazamiento el cual tiene de base desplazar bit a bit desde el más significativo hasta el menos significativo comparando si es mayor o igual a 5 si no lo es desplaza un bit caso contrario se suma 3 y a la respuesta se le compara igual que antes así hasta llegar al bit menos significativo
+Se utiliza circuitos integrados de comparados sumadores y NOR para dicha transformación los comparadores son la entrada de los 3 bits más significativos comparados con el numero 5 si es mayor o igual se suma 3 en el siguiente sumador y se desplaza un bit al siguiente comparador con las salidas del sumados a las entradas del comparador donde queda un bit flotando que se utilizara más adelante para seguir desplazando las centenas de la misma forma y así obtener la transformación
 
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/dise%C3%B1o%2011.png)
+
+Salida en displays 
+Para esto se utiliza 4 displays y 3 decodificadores de BCD a 7 segmentos el primer display es el signo conectado directamente el segundo display con su respectivo codificador nos indica las centenas el tercer display nos indica las decenas y el cuarto nos indica las unidades todos estos decodificadores están conectados a las salidas de la transformación binaria a BCD
+
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/dise%C3%B1o%2012.png)
                  
 9.- DESCRIPCIÓN DE PRERREQUISITOS Y CONFIGURACIÓN
 
