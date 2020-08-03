@@ -226,7 +226,7 @@ Suma de 11111111 + 11111111 (255 + 255).
 
 13.CRONOGRAMA
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/Cronograma.PNG)
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/cronograma.JPG)
 
 
 14.BIBLIOGRAFÍA
