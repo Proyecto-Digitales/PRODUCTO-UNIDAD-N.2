@@ -1,4 +1,4 @@
-                                                    SUMADOR - RESTADOR DE DOS NÚMEROS DE 8 BITS
+                                                 SUMADOR - RESTADOR DE DOS NÚMEROS DE 8 BITS
 
 
 1.PLANTEAMIENTO DEL PROBLEMA
@@ -40,20 +40,44 @@ REYES ERAZO, CRISTHIAN EDUARDO de la FACULTAD DE EDUCACIÓN TÉCNICA PARA EL DES
 
 •Diagramas de bloques.
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/diagrama1.jpg)
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/2.jpeg)
 
-•Diagramas UML. (casos de uso-clase)
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/3.jpeg)
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/diagrama2.jpg)
+•Diagramas esquemáticos.
+
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/4.jpeg)
+
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/5.jpeg)
+
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/6.jpeg)
+
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/7.jpeg)
+
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/8.jpeg)
+
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/9.jpeg)
+
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/10.jpeg)
+
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/11.jpeg)
+
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/12.jpeg)
+
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/13.jpeg)
+
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/14.jpeg)
+
 
 •Diagramas eléctricos.
 
 ![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/diagrama3.jpg)
 
 
-•Diagramas esquemáticos.
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/diagrama5.jpg)
+
+
+
 
 
 
