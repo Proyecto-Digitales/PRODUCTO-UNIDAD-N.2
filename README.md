@@ -1,9 +1,9 @@
-                                               SUMADOR - RESTADOR DE DOS NÚMEROS DE 8 BITS
+                                             SUMADOR - RESTADOR DE DOS NÚMEROS DE 8 BITS
 
 
 1.PLANTEAMIENTO DEL PROBLEMA
 
-Un sumador es un circuito digital que realiza la adición de números, este tipo de circuito también nos puede ayudar a la resta de dos números. Es por ello que se desea implementar los ya mencionados circuitos sumadores en el diseño de un circuito capaz de realizar estas dos operaciones (suma - resta), para dos números de 8 bits cada uno. Este diseño conlleva el reto de poder visualizar hasta los 9 bits de salida en 3 displays de 7 segmentos, que se podrá tener en nuestro circuito sumador- restador, además de mostrar el signo en el caso que el resultado sea negativo.  
+Un sumador es un circuito digital que realiza la adición de números, este tipo de circuito mediante el método de complemento A1, también nos puede ayudar a la resta de dos números. Es por ello que se desea implementar los ya mencionados circuitos sumadores en el diseño de un circuito capaz de realizar estas dos operaciones (suma - resta), para dos números de 8 bits cada uno. Este diseño conlleva el reto de poder visualizar hasta los 9 bits de salida en 3 displays de 7 segmentos, estos 9 bits es lo máximo que podrá tener nuestro circuito sumador- restador en la salida, además de mostrar el signo en el caso que se realice una resta y el resultado sea negativo.  
 
 
 2.OBJETIVOS
@@ -117,16 +117,19 @@ Las operaciones están codificadas con un bit de manera que tengamos las dos ope
 ![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/dise%C3%B1o%202.PNG)
 
 Variables de salida:
+
 Signo, E8,E7,E6,E5,E4,E3,E2,E1,E0
 
 ![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/dise%C3%B1o%203.png)
 
 Operación Suma
+
 Para realizar la operación de suma de dos números de 8 bits utilizamos 2 sumadores conectados el primer acarreo de salida al acarreo de entrada del siguiente sumador para obtener un sumador de 8 bits 
 
 ![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/dise%C3%B1o%204.png)
 
 Operación resta
+
 Para realizar la operación resta primero usamos dos comparadores de 4 bits conectados de forma que nos de uno de 8 bits que utilizaremos en la siguiente etapa
 
 ![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/dise%C3%B1o%205.png)
@@ -146,24 +149,27 @@ Para el signo utilizamos una compuerta And donde vemos que si el número A es me
 ![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/dise%C3%B1o%208.png)
 
 Salidas con multiplexores
+
 Para presentar las salidas utilizamos 10 multiplexores 2 a 1 conectados de la siguiente manera donde S son los bits del resultado de la suma y R son los bits del resultado de la resta controlados por OP que es la operación seleccionada y así indicándonos la respuesta de la operación que deseamos
 
 ![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/dise%C3%B1o%2010.png)
 
 Transformación de binario a BCD 
+
 Para esta última etapa el resultado obtenido máximo será de 9 bits más el signo para presentar este número en displays es necesario transformar el binario a BCD para esto usamos el método de transformación por desplazamiento el cual tiene de base desplazar bit a bit desde el más significativo hasta el menos significativo comparando si es mayor o igual a 5 si no lo es desplaza un bit caso contrario se suma 3 y a la respuesta se le compara igual que antes así hasta llegar al bit menos significativo
 Se utiliza circuitos integrados de comparados sumadores y NOR para dicha transformación los comparadores son la entrada de los 3 bits más significativos comparados con el numero 5 si es mayor o igual se suma 3 en el siguiente sumador y se desplaza un bit al siguiente comparador con las salidas del sumados a las entradas del comparador donde queda un bit flotando que se utilizara más adelante para seguir desplazando las centenas de la misma forma y así obtener la transformación
 
 ![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/dise%C3%B1o%2011.png)
 
 Salida en displays 
+
 Para esto se utiliza 4 displays y 3 decodificadores de BCD a 7 segmentos el primer display es el signo conectado directamente el segundo display con su respectivo codificador nos indica las centenas el tercer display nos indica las decenas y el cuarto nos indica las unidades todos estos decodificadores están conectados a las salidas de la transformación binaria a BCD
 
 ![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/dise%C3%B1o%2012.png)
                  
 9.- DESCRIPCIÓN DE PRERREQUISITOS Y CONFIGURACIÓN
 
-EL diseño de nuestro circuito sumador restador de 8 bits se lo implemento tanto en el simulador proteus como en el laboratorio virtual llamado constructor digital. Es por ello que el ususario que requiera revisar el funcionamiento debe tener instalado los dos simuladores, en la carpeta llamada simuladores se encuentra el archivo que se podrá descargar para poder visualizar el circuito implementado:
+EL diseño de nuestro circuito sumador restador de 8 bits se lo implemento tanto en el simulador proteus como en el laboratorio virtual llamado constructor digital. Es por ello que el ususario que requiera revisar el funcionamiento debe tener instalado los dos simuladores, en la carpeta llamada instaladores se encuentra el archivo que se podrá descargar para poder visualizar el circuito implementado:
 
 ![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/Conf%201.PNG)
 
@@ -186,11 +192,11 @@ En el datasheet podemos obervar todas las especificaciones que se tomó en cuent
 
 10.APORTACIONES
 
-Ademas de la implementación en el laboratorio virtual se realizó una simulación en el programa proteus, para comprobar el funcionamiento del circuito.
+Además de la implementación en el laboratorio virtual se realizó una simulación en el programa proteus, para comprobar el funcionamiento del circuito.
 
 En la carpeta instaladores se encuentra el archivo que contiene la simulación en proteus.
 
-Aqui observamos el circuito terminado en el simulador:
+Aquí observamos el circuito terminado en el simulador:
 
 ![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/Conf%202.PNG)
 
@@ -226,7 +232,7 @@ Suma de 11111111 + 11111111 (255 + 255).
 
 13.CRONOGRAMA
 
-![alt text](https://github.com/Proyecto-Digitales/INFORME-N.2/blob/master/Img/Cronograma.PNG)
+![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/cronograma.JPG)
 
 
 14.BIBLIOGRAFÍA
@@ -234,8 +240,6 @@ Suma de 11111111 + 11111111 (255 + 255).
 Alulema, D. (2020). Circuitos Digitales. Quito, Ecuador.
 
 Floyd, T. (2006). Fundamentos de sistemas digitales. Madrid: Pearson.
-
-Ricoy, A. (14 de Junio de 2020). Appinventor en español. Obtenido de https://sites.google.com/site/contadorasincrono/flipflop
 
 Siliceo, R. (2018). Algoritmo de las operaciones aritmeticas aplicadas a los codigos binarios, octal, hexadecimal y BCD con sus respectivas conversiones. Ciudad de Mexico.
 
@@ -245,7 +249,7 @@ Siliceo, R. (2018). Algoritmo de las operaciones aritmeticas aplicadas a los cod
 
 15.1 MANUAL DE USUARIO
 
-Para poder usar el circuito sumador - restador es necesario que el usuario este familizarizado con el código binario natural, a continuación dejamos una imagen en la que se puede observar una parte del cógido con sus equivalentes en decimal, ademas de el link para que el usuario pueda ver una la tabla completa del codigo binario natural.
+Para poder usar el circuito sumador - restador es necesario que el usuario este familiarizado con el código binario natural, a continuación dejamos una imagen en la que se puede observar una parte del cógido con sus equivalentes en decimal, ademas de el link para que el usuario pueda ver una la tabla completa del codigo binario natural.
 
 ![alt text](https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Img/manual%201.PNG)
 
@@ -280,7 +284,7 @@ Para el caso de proteus.
 
 Para el caso del constructor virtual. En este caso solo se encuentra habilitado el switch de la derecha, para el uso del control de operación.
 
-Nota: El switch de control en estado abierto significa que el circuito mostrara la operación resta, si se encuentra en estado cerrado, el circuito mostrará la operación suma.
+Nota: El switch de control en estado abierto significa que el circuito mostrará la operación resta, si el switch se encuentra cerrado, el circuito mostrará la operación suma.
 
 
 En el simulador proteus el usuario puede observar el resultado en displays de 7 segmentos como mostramos continuación:
