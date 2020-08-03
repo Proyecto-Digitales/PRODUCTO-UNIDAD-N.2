@@ -1,4 +1,4 @@
-                                SUMADOR RESTADOR DE DOS NÚMEROS DE 8 BITS
+                                                    SUMADOR - RESTADOR DE DOS NÚMEROS DE 8 BITS
 
 
 1.PLANTEAMIENTO DEL PROBLEMA
