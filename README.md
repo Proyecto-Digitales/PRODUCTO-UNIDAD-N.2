@@ -323,8 +323,12 @@ https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Hojas%20te
 
 Datasheet 74283
 
-https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Hojas%20tecnicas/datasheet74283.pdf
+https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Hojas%20tecnicas/datasheet%207483.pdf
 
 Datasheet 7485
 
 https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Hojas%20tecnicas/datasheet7485.pdf
+
+Display 7 segmentos
+
+https://github.com/Proyecto-Digitales/PRODUCTO-UNIDAD-N.2/blob/master/Hojas%20tecnicas/TOS-5161AS-B_Oasis.pdf
